@@ -19,13 +19,15 @@ class Apps extends Component {
         return (
           <Grid.Column computer={4} mobile={16} tablet={16}>
             <Card>
-              <Image src={app.logo}/>
+              <Image style={styles.appCard} src={app.logo}/>
               <Card.Content>
                 <Card.Header>{app.name}</Card.Header>
                 <Card.Meta>
                   <span>{app.author}</span>
                 </Card.Meta>
-                <Card.Description>{app.description}</Card.Description>
+                <Card.Description style={styles.appDescription}>
+                  {app.description}
+                </Card.Description>
               </Card.Content>
               <Card.Content extra>
                 <Link to={`/apps/${app.id}`}>View App</Link>
@@ -47,6 +49,20 @@ class Apps extends Component {
         </Grid>
       </Container>
     )
+  }
+}
+
+const styles = {
+  appDescription: {
+    Height: '100px',
+    overflowY: 'scroll',
+    paddingBottom : '10px',
+    marginBottom : '10px',
+  },
+  appCard:{
+    height: 'auto',
+    paddingBottom: '10px',
+    paddingBottom: '10px',
   }
 }
 
