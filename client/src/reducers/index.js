@@ -1,7 +1,7 @@
-import {combinedReducers} from 'redux';
+import { combineReducers } from 'redux';
 import apps from './apps';
 
-const rootReducer = combinedReducers({
+const rootReducer = combineReducers({
   apps,
 });
 
