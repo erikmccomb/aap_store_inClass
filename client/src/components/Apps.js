@@ -44,7 +44,8 @@ state = { category: '' }
               <Card.Content>
                 <Card.Header>{app.name}</Card.Header>
                 <Card.Meta>
-                  <span>{app.author}</span>
+                  <span>Author: {app.author}</span>
+                  <span>Category: {app.category}</span>
                 </Card.Meta>
                 <Card.Description style={styles.appDescription}>
                   {app.description}
@@ -90,15 +91,14 @@ state = { category: '' }
 
 const styles = {
   appDescription: {
-    Height: '100px',
+    height: 'auto',
     overflowY: 'scroll',
     paddingBottom : '10px',
-    marginBottom : '10px',
   },
   appCard:{
-    height: 'auto',
+    height: '300px',
     paddingBottom: '10px',
-    paddingBottom: '10px',
+    marginBottom: '10px',
   }
 }
 
