@@ -12,5 +12,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+client/node_modules
+
 
 .byebug_history
