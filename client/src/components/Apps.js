@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
-import {getApps} from '../actions/apps';
 import {
   Container, 
   Grid, 
@@ -15,13 +14,6 @@ import {
 
 class Apps extends Component {
 state = { category: '' }
-
-
-  componentDidMount() {
-    this
-      .props
-      .dispatch(getApps());
-  }
 
   categoryOptions = () => {
     return this.props.categories.map( (category, index) => {
@@ -96,7 +88,7 @@ const styles = {
     paddingBottom : '10px',
   },
   appCard:{
-    height: '300px',
+    height: 'auto',
     paddingBottom: '10px',
     marginBottom: '10px',
   }

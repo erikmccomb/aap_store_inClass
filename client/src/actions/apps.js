@@ -2,11 +2,12 @@ import axios from 'axios';
 
 // get all apps = index action of our apps contoller
 
-export const getApps = () => {
+export const getApps = (callback) => {
   // thunk
   return(dispatch) => {
     axios.get('/api/apps')
       .then( res => dispatch({ type: 'APPS', apps: res.data }))
+      .then(callback())
   }
 }
 
