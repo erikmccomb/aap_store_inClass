@@ -1,3 +1,5 @@
+# standard rails crud controller
+
 class Api::AppsController < ApplicationController
   before_action :set_app, only: [:show, :update, :destroy]
 
