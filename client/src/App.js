@@ -13,3 +13,5 @@ const App = () => (
     <Route component={NoMatch}/>
   </Switch>
 )
+
+export default App;

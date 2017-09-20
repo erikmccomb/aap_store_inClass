@@ -30,9 +30,11 @@ const updateApp = (app) => {
 
 //delete an app - destroy action of our apps conrtroller
 
-export const deleteApp = (app) => {
+export const deleteApp = (id) => {
   return(dispatch) => {
     axios.delete(`/api/apps/${id}`)
-      .then( res => dispathc({ type: 'DELTE_APP', id }))
+      .then( res => dispatch({ type: 'DELTE_APP', id }))
   }
 }
+
+export default axios;

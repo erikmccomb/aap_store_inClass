@@ -4,7 +4,7 @@ import {Header} from 'semantic-ui-react';
 
 const Home = () => (
   <Header textAlign='center' as='h3'>
-    Welcome To The
+    Welcome To The 
     <Link to='/apps'>App Store</Link>
   </Header>
 )
